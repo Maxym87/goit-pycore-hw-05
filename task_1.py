@@ -11,6 +11,8 @@ def caching_fibonacci() -> Callable[[int], int]:
             return cache[n]
         
         cache[n] =  fibonacci(n - 1) + fibonacci(n - 2)
+        return cache[n]
 
     return fibonacci
+    
 fib = caching_fibonacci()
