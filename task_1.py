@@ -1,4 +1,4 @@
-from collections import Callable
+from typing import Callable
 
 def caching_fibonacci() -> Callable[[int], int]:
     cache = {}
@@ -16,3 +16,4 @@ def caching_fibonacci() -> Callable[[int], int]:
     return fibonacci
     
 fib = caching_fibonacci()
+
