@@ -1,9 +1,16 @@
 
+import re
+from collections import Callable
+
 def generator_numbers(text: str):
-    for word in text.split():
+    words = text.split()
+
+    for word in words:
         try:
-            yield float(word)
+            number = float(word)
+            yield number
         except ValueError:
             continue
 
+def sum_profit(text: str, func: Callable) -> float:
         
